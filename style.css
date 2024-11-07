@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: #2d2c2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main h1 {
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 20px #000000;
+}
+.main .middle {
+    width: 300px;
+    height: 600px;
+    box-shadow: 0 2px 5px 5px #3BD14B;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: hidden;
+}
+.main .middle::after {
+    visibility: visible;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    background: #232323;
+    opacity: 1;
+    border-radius: 20px;
+    transition: 0.9s;
+} 
+.main .middle:hover::after {
+    transition: 1.5s cubic-bezier(0.8, -0.49, .36, 1);
+    visibility: hidden;
+    top: 100%;
+}
+.main .middle .top_sec {
+    width: 100%;
+    height: 30%;
+    border-radius: 20px 20px 0 0;
+    background-color: #232323;
+}
+
+.main .middle .top_sec .contacts {
+    overflow: hidden;
+    overflow: scroll !important;
+    width: 100%;
+    height: 100%;
+    background: #232323;
+    margin-top: 17px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.main .middle .top_sec .contacts .cont_list {
+    display: flex;
+    width: 100%;
+    height: 55px;
+    background-color: #a8a8a824;
+    gap: 0 10px;
+    padding: 0 20px;
+}
+.main .middle .top_sec .contacts .cont_list img {
+    border-radius: 50%;
+    padding: 10px;
+    object-fit: cover;
+}
+.main .middle .top_sec .contacts .cont_list .cont_details {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+}
+.main .middle .top_sec .contacts .cont_list .cont_details span {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+.main .middle .top_sec .contacts .cont_list .cont_details small {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.main .middle .bottom_sec {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    background: #232323;
+    border-radius: 0 0 20px 20px;
+}
+.main .middle .bottom_sec .input_sec {
+    width: 100%;
+    height: 13%;
+    background-color: #2F2F2F;
+    display: flex;
+    justify-content: center;
+}
+.main .middle .bottom_sec .input_sec .set-width {
+    width: 210px;
+    overflow: hidden;
+}
+.main .middle .bottom_sec .input_sec #input_box {
+    width: 230px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent; 
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+}
+.main .middle .bottom_sec .dial_pad_sec {
+    width: 100%;
+    height: 87%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main .middle .bottom_sec .dial_pad_sec .main_dial {
+    margin-top: 15px;
+}
+.main .middle .bottom_sec .dial_pad_sec .main_dial ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px 20px;
+}
+.main .middle .bottom_sec .dial_pad_sec .main_dial ul li {
+    width: 50px;
+    height: 50px;
+    background: #313131;
+    color: #fff;
+    margin: 0 10px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 8px 2px #120E10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+.main .middle .bottom_sec .dial_pad_sec .main_dial ul li:hover {
+    cursor: pointer;
+    background: transparent;
+    color: #ccc;
+}
+.main .middle .bottom_sec .dial_pad_sec .main_dial ul .fa-phone {
+    background: #3BD14B;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    visibility: hidden;
+    opacity: 0.1;
+}
+.main .middle:hover .bottom_sec .dial_pad_sec .main_dial ul .fa-phone {
+    transform: translateY(0%) rotate(720deg);
+    transition: 0.7s;
+    transition-delay: 1.25s;
+    visibility: visible;
+    opacity: 1;
+}
+.main .middle .bottom_sec .dial_pad_sec .main_dial ul .fa-phone:hover {
+    transform: rotate(130deg);
+    transition: 0.7s;
+    background: red;
+}
+.main .middle .bottom_sec .dial_pad_sec .main_dial ul li i {
+    font-size: 18px;
+}
+
